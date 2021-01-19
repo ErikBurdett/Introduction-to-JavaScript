@@ -14,9 +14,16 @@ Task 1a - Voting Age
 Do the following:   
    1. Create a variable called votingAge and assign it a value
    2. Console log true if age is 18 or higher
+  
 
    HINT: no function required
 */
+
+let votingAge = 18;
+if (votingAge > 18){
+  console.log(true)
+}
+console.log(votingAge)
 
 
 
@@ -30,7 +37,11 @@ Do the following:
 
    HINT: no function required
 */
-
+let var1 = 1;
+let var2 = 2;
+if (var1 < var2){
+console.log(var1 + var2);
+}
 
 
 
@@ -45,7 +56,8 @@ Do the following:
 
    HINT: look up the Number method
 */
-
+let string1 = "1999";
+console.log(parseInt(string1));
 
 
 
@@ -76,9 +88,12 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(human){
+  return human * 7;
 }
+console.log(dogYears(5));
+
+
 
 
 
@@ -109,10 +124,31 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight, age){
+  // error message incase of no input w/ input directions
+  const inputMessage = "please input dog age and weight, puppies in the form of x/12";
+//   Adult Dogs 1 Year & Older
+  if(age >= 1 && weight <= 5){
+    return weight * .05;
+  }else if(age >= 1 && weight >= 6 && weight <= 10){
+    return weight * .04;
+  }else if(age >= 1 && weight >= 11 && weight <= 15){
+    return weight * .03;
+  }else if(age >= 1 && weight >= 15){
+    return weight * .02;
+  }else if(age < 1 && age >= 0.583){
+    return weight * .04;
+  }else if(age < .0583 && age >= .333){
+    return weight * .05;
+  }else if(age < .333){
+    return weight * .10;
   }
-
+  else(console.log(inputMessage))
+  
+  
+}
+console.log(hungryDog(15,1));
+  
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
